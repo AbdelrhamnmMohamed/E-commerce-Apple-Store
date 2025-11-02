@@ -1,0 +1,109 @@
+
+
+.ticket-page{
+  color: var(--text);
+  background:
+    radial-gradient(800px 420px at 10% -20%, color-mix(in oklab, var(--panel-2) 24%, transparent), transparent 60%),
+    radial-gradient(800px 420px at 90% -10%, color-mix(in oklab, var(--panel-2) 18%, transparent), transparent 60%),
+    var(--bg);
+  padding-top: 84px; 
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+
+.ticket-page .muted,
+.ticket-page .text-muted{ color: var(--muted) !important; }
+.ticket-page h1{ color: var(--text); }
+
+
+.ticket-card{
+  max-width: 720px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--text);
+}
+
+
+.ticket-card .form-label{
+  color: var(--text);
+  opacity: .95;
+  font-weight: 500;
+}
+.ticket-card .form-control,
+.ticket-card .form-select{
+  background: color-mix(in oklab, var(--panel) 92%, transparent);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  transition: border-color .15s ease, box-shadow .15s ease, background-color .15s ease;
+}
+.ticket-card .form-control::placeholder{ color: var(--muted); }
+.ticket-card .form-control:focus,
+.ticket-card .form-select:focus{
+  outline: none;
+  border-color: color-mix(in oklab, var(--accent) 45%, var(--line));
+  box-shadow: var(--ring);
+}
+
+
+.ticket-card .input-group-text{
+  background: color-mix(in oklab, var(--panel-2) 85%, var(--panel));
+  border-left: 1px solid var(--line);
+  border-color: var(--line);
+  color: var(--text);
+  border-radius: 0 12px 12px 0;
+}
+
+
+.upload-zone{
+  display: block;
+  border: 2px dashed var(--line);
+  border-radius: 16px;
+  background: color-mix(in oklab, var(--panel) 96%, transparent);
+  cursor: pointer;
+  transition: border-color .15s ease, background-color .15s ease, box-shadow .15s ease;
+}
+.upload-zone .upload-inner{
+  padding: 28px 18px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 6px;
+  color: var(--text);
+}
+.upload-zone .upload-icon{
+  font-size: 26px;
+  line-height: 1;
+  margin-bottom: 6px;
+  opacity: .9;
+}
+.upload-zone:hover,
+.upload-zone.dragging{
+  background: color-mix(in oklab, var(--panel-2) 85%, var(--panel));
+  border-color: color-mix(in oklab, var(--accent) 45%, var(--line));
+  box-shadow: var(--ring);
+}
+
+
+.btn-submit{
+  background: color-mix(in oklab, var(--accent-2) 22%, var(--panel));
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  transition: .2s ease;
+}
+.btn-submit:hover{
+  background: color-mix(in oklab, var(--accent-2) 30%, var(--panel));
+  border-color: color-mix(in oklab, var(--accent) 45%, var(--line));
+}
+
+
+:root[data-theme="dark"] .ticket-page .bg-white{ background-color: var(--panel) !important; }
+:root[data-theme="dark"] .ticket-page .text-dark{ color: var(--text) !important; }
+
+
+@media (max-width: 991px){
+  .ticket-page{ padding-top: 72px; }
+}

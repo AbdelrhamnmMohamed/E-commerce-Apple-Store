@@ -1,0 +1,51 @@
+.signup-box {
+  max-width: 900px;
+}
+
+
+.right-side {
+  position: relative;
+}
+
+.product-image {
+  object-fit: cover;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  border-radius: 12px;
+  height: 85%;
+  
+}
+
+.overlay-text {
+  transform: translate(0%, -75%);
+  
+  -webkit-transform: translate(0%, -75%);
+  -moz-transform: translate(0%, -75%);
+  -ms-transform: translate(0%, -75%);
+  -o-transform: translate(0%, -75%);
+}
+
+
+.form-control {
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #000;
+  box-shadow: none;
+}
+
+.btn-dark:hover {
+  background-color: #333 !important;
+}
+
+.btn {
+  transition: 0.3s ease;
+}
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13,110,253,.25);
+}

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shipping Information</title>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-T2dMlPqL7R2tK6W91C+kGFrHxgGxFZkXeykWmRGz1YYnXjZT9Byw3SgRv+2RzW9x6bc1h0eWgRj5S6aDzQZzPg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="shipping.css" />
+  </head>
+  <body>
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid">
+    <div class="w-100 px-3 px-lg-4 py-2 bg-black text-white badge shadow-lg d-flex align-items-center justify-content-between">
+      
+      
+      <a class="navbar-brand logo-text text-white d-flex align-items-center" href="../index.html">
+        Premium <i class="fa-brands fa-apple ms-2"></i>
+      </a>
+
+      
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <div class="d-flex align-items-center gap-3">
+          <a href="#" class="icon-link icon-btn text-decoration-none fs-4 position-relative" aria-label="Wishlist">
+            <i class="fa-solid fa-heart text-danger"></i>
+            <span id="wishlistCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 10px; display: none;">0</span>
+          </a>
+          <a href="#" class="icon-link icon-btn text-decoration-none fs-5 position-relative" aria-label="Cart">
+            <i class="fa-solid fa-cart-shopping text-white"></i>
+            <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 10px; display: none;">0</span>
+          </a>
+          <a href="#" class="icon-link icon-btn text-decoration-none fs-5" aria-label="User">
+            <i class="fa fa-user text-white"></i>
+          </a>
+          <button id="themeToggle" class="btn btn-sm theme-toggle ms-1" aria-label="Toggle theme">
+            <i class="fa-regular fa-moon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    
+<main class="shipping-page">
+    <div class="container pt-3">
+      <a href="../cart/cart.html" class="text-decoration-none small"><i class="fa-solid fa-arrow-left me-2"></i> Back</a>
+    </div>
+      
+    <div class="progress-container py-4">
+      <div class="container">
+        <div
+          class="progress-steps d-flex justify-content-between align-items-center"
+        >
+          <div class="step active">
+            <div class="circle">1</div>
+            <p>Shipping Information</p>
+          </div>
+          <div class="line"></div>
+          <div class="step">
+            <div class="circle">2</div>
+            <p>Delivery Method</p>
+          </div>
+          <div class="line"></div>
+          <div class="step">
+            <div class="circle">3</div>
+            <p>Payment Information</p>
+          </div>
+          <div class="line"></div>
+          <div class="step pb-4">
+            <div class="circle ">4</div>
+            <p>Review Order</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5">
+      <h2 class="text-center mb-4">Shipping Information</h2>
+
+      <form class="p-4 rounded shadow-sm bg-white">
+        
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="firstName" class="form-label">First Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="firstName"
+              placeholder="Abdelhamid"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="lastName"
+              placeholder="Hafez"
+              required
+            />
+          </div>
+        </div>
+
+        
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="example@email.com"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input
+              type="tel"
+              class="form-control"
+              id="phone"
+              placeholder="+20 123 456 789"
+              required
+            />
+          </div>
+        </div>
+
+        
+        <div class="row mb-3">
+          <div class="col-md-4">
+            <label for="city" class="form-label">City</label>
+            <input
+              type="text"
+              class="form-control"
+              id="city"
+              placeholder="Cairo"
+              required
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="state" class="form-label">State</label>
+            <input
+              type="text"
+              class="form-control"
+              id="state"
+              placeholder="Giza"
+              required
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="zip" class="form-label">Zip Code</label>
+            <input
+              type="text"
+              class="form-control"
+              id="zip"
+              placeholder="12345"
+              required
+            />
+          </div>
+        </div>
+
+        
+        <div class="text-center">
+          <button type="submit" class="btn btn-dark px-5 py-2 w-100">Continue</button>
+        </div>
+      </form>
+
+      
+    </div>
+</main>
+      
+    <footer>
+        <div class="container pt-5">
+            <div class="row align-items-center justify-content-center">
+            <div class="col-md-4 text-center">
+                <h5>Premium</h5>
+                <p>The best way to buy the products you love.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <h5>Links</h5>
+                <a class="text-decoration-none" href="#">Home</a>
+                <a class="text-decoration-none" href="#new">New Arrival</a>
+                <a class="text-decoration-none" href="#best">Best Seller</a>
+                <a class="text-decoration-none" href="/products/products.html">Explore Product</a>
+                <a class="text-decoration-none" href="/About-us/about.html">About Us</a>
+            </div>
+            <div class="col-md-4 text-center">
+                <h5>Our Social</h5>
+                <div class="social">
+                <a href="https://www.facebook.com/"><i class="bi bi-facebook fs-4"></i></a>
+                <a href="https://x.com/"><i class="bi bi-twitter px-4 fs-4"></i></a>
+                <a href="https://www.instagram.com/"><i class="bi bi-instagram fs-4"></i></a>
+                </div>
+            </div>
+            </div>
+            <hr class="mt-4 mb-2">
+            <p class="text-center mb-0">© 2025 Premium Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script type="module" src="../shared/nav.js"></script>
+<script type="module" src="../shared/navbar-counts.js"></script>
+<script type="module" src="shipping.js"></script>
+<script type="module" src="../shared/theme.js"></script>
+  </body>
+</html>
+
+
+

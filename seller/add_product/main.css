@@ -1,0 +1,161 @@
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #f8f9fa;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: black;
+    color: #fff;
+    transition: all 0.3s ease;
+    z-index: 1050;
+    border-radius: 16px;
+}
+.sidebar.collapsed {
+    left: -250px;
+}
+.sidebar h3 {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar ul li{
+    text-align: center;
+    transition: .3s;
+}
+.sidebar ul li .active{
+    color: black;
+    background-color: white;
+
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    transition: 0.3s;
+    text-align: center;
+    border-radius: 8px;
+    text-align: center;
+}
+.sidebar ul li a:hover {
+    background-color: #343a40;
+}
+.sidebar ul li a i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+main nav{
+    border-radius: 12px;
+}
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+.main-content.expanded {
+    margin-left: 0;
+}
+
+.navbar-custom {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1040;
+}
+
+.add-product-section {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  font-family: "Poppins", sans-serif;
+}
+
+.add-product-section h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #111;
+}
+
+.add-product-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.add-product-form label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #000;
+}
+
+.add-product-form input {
+  padding: 12px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.add-product-form input:focus {
+  border-color: #000;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.cancel-btn,
+.save-btn {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancel-btn {
+  background-color: #e5e5e5;
+  color: #000;
+}
+
+.cancel-btn:hover {
+  background-color: #d4d4d4;
+}
+
+.save-btn {
+  background-color: #000;
+  color: #fff;
+}
+
+.save-btn:hover {
+  background-color: #333;
+}
+
+
+

@@ -1,0 +1,22 @@
+.login-box {
+  max-width: 900px;
+}
+
+.left-side {
+  position: relative;
+}
+
+.product-image {
+  object-fit: cover;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  border-radius: 12px;
+}
+
+.overlay-text {
+  transform: translate(7%, -60%);
+  width: 75%;
+  -webkit-transform: translate(7%, -80%);
+  -moz-transform: translate(7%, -60%);
+  -ms-transform: translate(7%, -60%);
+  -o-transform: translate(7%, -60%);
+}

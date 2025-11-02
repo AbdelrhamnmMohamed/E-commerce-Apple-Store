@@ -1,0 +1,27 @@
+    .navbar-brand {
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: #fff !important;
+    }
+    .nav-link {
+        color: #ddd !important;
+        font-weight: 500;
+        margin-right: 10px;
+        transition:.2s;
+    }
+    .nav-link:hover {
+        color: black !important;
+        background-color: rgb(233, 233, 233);
+        border-radius: 8px;
+    }
+    .icon-btn {
+        color: #ddd;
+        font-size: 1.2rem;
+        margin-left: 15px;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+    .icon-btn:hover {
+        color: white;
+        transform: scale(1.2);
+    }

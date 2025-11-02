@@ -1,0 +1,73 @@
+
+
+
+
+
+
+.shipping-page {
+  --sp-bg: var(--bg);
+  --sp-panel: var(--panel);
+  --sp-panel-2: var(--panel-2);
+  --sp-text: var(--text);
+  --sp-muted: var(--muted);
+  --sp-line: var(--line);
+  --sp-success: #28a745;
+  color: var(--sp-text);
+}
+
+
+.shipping-page .progress-container { border-bottom: 1px solid var(--sp-line); margin-bottom: 30px; }
+.shipping-page .progress-steps { max-width: 700px; margin: 0 auto; }
+.shipping-page .step { text-align: center; position: relative; flex: 1; }
+.shipping-page .circle{
+  width:35px;height:35px;line-height:35px;border-radius:50%;
+  background-color: color-mix(in oklab, var(--sp-panel-2) 60%, var(--sp-line));
+  color: var(--sp-text); margin:0 auto 8px; font-weight:600; transition:.3s;
+}
+.shipping-page .step.completed .circle,
+.shipping-page .step.active .circle { background-color: var(--sp-success); color:#fff; }
+.shipping-page .line{ height:3px; background-color: var(--sp-line); flex:1; margin:0 5px; border-radius:2px; }
+.shipping-page .step.completed + .line { background-color: var(--sp-success); }
+.shipping-page .step p{ margin:0; font-size:14px; color:var(--sp-text); opacity:.9; font-weight:500; }
+
+
+.shipping-page form{
+  max-width:700px; margin:0 auto;
+  background: var(--sp-panel);
+  border:1px solid var(--sp-line);
+  border-radius: var(--radius);
+}
+
+
+.shipping-page .form-label{ font-weight:500; color:var(--sp-text) !important; opacity:.95; }
+.shipping-page .form-control{
+  background: color-mix(in oklab, var(--sp-panel) 92%, transparent);
+  color: var(--sp-text);
+  border:1px solid var(--sp-line);
+  border-radius:8px; padding:10px;
+  transition: box-shadow .15s, border-color .15s;
+}
+.shipping-page .form-control::placeholder{ color: var(--sp-muted); }
+.shipping-page .form-control:focus{
+  outline:none;
+  border-color: color-mix(in oklab, var(--accent) 40%, var(--sp-line));
+  box-shadow: var(--ring);
+}
+
+
+.shipping-page button{
+  border-radius:8px; font-weight:500; transition:.3s;
+  background: color-mix(in oklab, var(--accent-2) 14%, var(--sp-panel));
+  color: var(--sp-text);
+  border:1px solid var(--sp-line);
+}
+.shipping-page button:hover{
+  background: color-mix(in oklab, var(--accent-2) 24%, var(--sp-panel));
+  border-color: color-mix(in oklab, var(--accent) 45%, var(--sp-line));
+}
+
+
+:root[data-theme="dark"] .shipping-page .bg-white{
+  background-color: var(--panel) !important;
+  border-color: var(--line) !important;
+}
