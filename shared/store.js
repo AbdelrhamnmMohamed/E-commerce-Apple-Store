@@ -83,7 +83,7 @@ const DEFAULT_PRODUCTS = [
 const initializeDefaultProducts = () => {
   const existingProducts = localStorage.getItem("allProducts");
   if (!existingProducts) {
-
+    console.log("🛒 No products found in localStorage. Initializing default products...");
     const productsForStorage = DEFAULT_PRODUCTS.map(p => ({
       id: p.id,
       name: p.title,
@@ -95,6 +95,11 @@ const initializeDefaultProducts = () => {
       createdAt: new Date().toISOString().split("T")[0]
     }));
     localStorage.setItem("allProducts", JSON.stringify(productsForStorage));
+    console.log(`✅ Successfully initialized ${productsForStorage.length} default products!`);
+    console.log("📦 Products:", productsForStorage.map(p => p.name).join(", "));
+  } else {
+    const count = JSON.parse(existingProducts).length;
+    console.log(`✅ Found ${count} existing products in localStorage.`);
   }
 };
 

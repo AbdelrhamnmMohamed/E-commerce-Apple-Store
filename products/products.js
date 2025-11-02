@@ -16,7 +16,7 @@ function cardTemplate(p) {
 
   let imagePath = p.image;
   if (!imagePath.startsWith('data:') && !imagePath.startsWith('http')) {
-    imagePath = '../' + imagePath.replace(/^\.\.\
+    imagePath = '../' + imagePath.replace(/^\.\.\//, '');
   }
   
   return `
@@ -51,16 +51,35 @@ function render() {
   const grid = $("#productsGrid");
   const term = state.search.trim().toLowerCase();
   const allProducts = getAllProducts();
+  
+  // Check if there are NO products at all in storage
+  if (allProducts.length === 0) {
+    grid.innerHTML = `
+      <div class="col-12">
+        <div class="alert alert-warning text-center my-5" role="alert">
+          <h4 class="alert-heading">⚠️ No Products Found!</h4>
+          <p>Please refresh the page. Products should initialize automatically.</p>
+          <hr>
+          <button onclick="location.reload()" class="btn btn-warning mt-3">
+            🔄 Refresh Page
+          </button>
+        </div>
+      </div>
+    `;
+    return;
+  }
+  
   const filtered = allProducts.filter((p) => {
     const okCat = state.category === "all" || p.category === state.category;
     const okSearch = !term || p.title.toLowerCase().includes(term);
     const okStatus = !p.status || p.status === "Active";
     return okCat && okSearch && okStatus;
   });
+  
   grid.innerHTML =
     filtered.map(cardTemplate).join("") ||
     `
-    <p class="text-muted my-5">No products found.</p>
+    <p class="text-muted my-5">No products found matching your search.</p>
   `;
 }
 
