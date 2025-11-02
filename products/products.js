@@ -11,7 +11,7 @@ import {
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
-
+// Product card template
 function cardTemplate(p) {
 
   let imagePath = p.image;
