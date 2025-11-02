@@ -1,11 +1,8 @@
 
-
-
-
 import { autoCleanStorage } from './auto-clean-storage.js';
 autoCleanStorage();
 
-
+// Default products to seed into localStorage
 const DEFAULT_PRODUCTS = [
   {
     id: "p-iph-17",
@@ -79,7 +76,7 @@ const DEFAULT_PRODUCTS = [
   },
 ];
 
-
+// Initialize default products in localStorage if not present 
 const initializeDefaultProducts = () => {
   const existingProducts = localStorage.getItem("allProducts");
   if (!existingProducts) {

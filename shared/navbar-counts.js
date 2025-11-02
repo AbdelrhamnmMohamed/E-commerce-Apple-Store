@@ -1,6 +1,4 @@
 
-
-
 import { getWishlist, getCart } from "./store.js";
 
 
