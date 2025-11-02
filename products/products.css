@@ -1,0 +1,16 @@
+
+
+
+.filter{ margin-top: 28px; }
+.filter h2{ font-weight:800; letter-spacing:.2px; margin-bottom: 1rem; color: var(--text); }
+
+
+#productsGrid{ row-gap: 24px; }
+#productsGrid .card{ width: 18rem; }   
+
+@media (max-width: 991px){
+  #productsGrid .card{ width: 16.2rem; }
+}
+@media (max-width: 575px){
+  #productsGrid .card{ width: 100%; }
+}

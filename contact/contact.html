@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Get in Touch</title>
+
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-T2dMlPqL7R2tK6W91C+kGFrHxgGxFZkXeykWmRGz1YYnXjZT9Byw3SgRv+2RzW9x6bc1h0eWgRj5S6aDzQZzPg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <div
+          class="w-100 px-3 px-lg-4 py-2 bg-black text-white badge shadow-lg d-flex align-items-center"
+        >
+          <a
+            class="navbar-brand logo-text text-white d-flex align-items-center me-2"
+            href="../index.html"
+          >
+            Premium <i class="fa-brands fa-apple ms-2"></i>
+          </a>
+
+          <button
+            class="navbar-toggler border-0 text-white ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-lg-auto my-2 my-lg-0 gap-lg-4">
+              <li class="nav-item">
+                <a class="nav-link text-white fs-6" href="../index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white fs-6"
+                  href="../products/products.html"
+                  >Explore Product</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white fs-6" href="contact.html"
+                  >Contact Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white fs-6"
+                  href="../About-us/about.html"
+                  >About Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white fs-6" href="../ticket/ticket.html"
+                  >Ticket</a
+                >
+              </li>
+            </ul>
+
+            <div class="d-flex align-items-center gap-3 ms-lg-3">
+              <a
+                href="../wishlist/wish.html"
+                class="icon-link icon-btn text-decoration-none fs-4 position-relative"
+                aria-label="Wishlist"
+              >
+                <i class="fa-solid fa-heart text-danger"></i>
+                <span id="wishlistCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 10px; display: none;">0</span>
+              </a>
+              <a
+                href="../cart/cart.html"
+                class="icon-link icon-btn text-decoration-none fs-5 position-relative"
+                aria-label="Cart"
+              >
+                <i class="fa-solid fa-cart-shopping text-white"></i>
+                <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 10px; display: none;">0</span>
+              </a>
+              <a
+                href="#"
+                class="icon-link icon-btn text-decoration-none fs-5"
+                aria-label="Profile"
+                ><i class="fa fa-user text-white"></i
+              ></a>
+            </div>
+            <button
+              id="themeToggle"
+              class="btn btn-sm theme-toggle ms-1"
+              aria-label="Toggle theme"
+            >
+              <i class="fa-regular fa-moon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="contact-page py-5">
+      <div class="container">
+        
+        <section class="text-center mb-5">
+          <h1 class="display-5 fw-bold">Get in Touch</h1>
+          <p class="lead muted mx-auto" style="max-width: 700px">
+            Have a question or need support? Fill out the form below and we’ll
+            get back to you as soon as possible.
+          </p>
+        </section>
+
+        <div class="row g-4">
+          
+          <div class="col-lg-7">
+            <form class="contact-card p-4 rounded-3" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="name" class="form-label">Name</label>
+                  <input
+                    id="name"
+                    type="text"
+                    class="form-control"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    id="email"
+                    type="email"
+                    class="form-control"
+                    placeholder="your.email@example.com"
+                    required
+                  />
+                </div>
+                <div class="col-12">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input
+                    id="subject"
+                    type="text"
+                    class="form-control"
+                    placeholder="How can we help?"
+                    required
+                  />
+                </div>
+                <div class="col-12">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea
+                    id="message"
+                    rows="5"
+                    class="form-control"
+                    placeholder="Your message..."
+                    required
+                  ></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-send w-auto px-4">
+                    Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          
+          <div class="col-lg-5">
+            
+            <aside class="assist-card p-4 rounded-3 mb-4">
+              <h5 class="mb-1 fw-semibold">Need Immediate Assistance?</h5>
+              <p class="muted mb-3">Our support team is here to help.</p>
+              <a href="tel:18002752273" class="assist-phone">0100-929-1615</a>
+              <div class="muted small">Available 24/7</div>
+            </aside>
+
+            
+            <section>
+              <h5 class="fw-semibold mb-3">Frequently Asked Questions</h5>
+
+              <details class="faq-item rounded-3" open>
+                <summary>What are your store hours?</summary>
+                <div class="faq-body">
+                  Most locations are open 10:00–21:00 daily. Hours may vary by
+                  store and holidays.
+                </div>
+              </details>
+
+              <details class="faq-item rounded-3">
+                <summary>How can I track my order?</summary>
+                <div class="faq-body">
+                  After checkout, you’ll receive a tracking link via email. You
+                  can also view it in your account.
+                </div>
+              </details>
+
+              <details class="faq-item rounded-3">
+                <summary>What is your return policy?</summary>
+                <div class="faq-body">
+                  Returns are accepted within 14 days in original condition.
+                  Some exclusions apply.
+                </div>
+              </details>
+
+              <details class="faq-item rounded-3">
+                <summary>Do you offer financing options?</summary>
+                <div class="faq-body">
+                  Yes—financing is available at checkout with eligible providers
+                  and cards.
+                </div>
+              </details>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container pt-5">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-4 text-center">
+            <h5>Premium</h5>
+            <p>The best way to buy the products you love.</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <h5>Links</h5>
+            <a class="text-decoration-none" href="../products/products.html"
+              >Explore Product</a
+            >
+            <a class="text-decoration-none" href="../About-us/about.html"
+              >About Us</a
+            >
+            <a class="text-decoration-none" href="contact.html">Contact Us</a>
+            <a class="text-decoration-none" href="../ticket/ticket.html"
+              >Ticket</a
+            >
+          </div>
+          <div class="col-md-4 text-center">
+            <h5>Our Social</h5>
+            <div class="social">
+              <a href="https://www.facebook.com/"
+                ><i class="bi bi-facebook fs-4"></i
+              ></a>
+              <a href="https://x.com/"
+                ><i class="bi bi-twitter px-4 fs-4"></i
+              ></a>
+              <a href="https://www.instagram.com/"
+                ><i class="bi bi-instagram fs-4"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <hr class="mt-4 mb-2" />
+        <p class="text-center mb-0">
+          © 2025 Premium Store. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../shared/nav.js"></script>
+    <script type="module" src="../shared/navbar-counts.js"></script>
+    <script type="module" src="../shared/theme.js"></script>
+  </body>
+</html>

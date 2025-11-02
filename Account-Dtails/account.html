@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Account Details</title>
+
+ 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-T2dMlPqL7R2tK6W91C+kGFrHxgGxFZkXeykWmRGz1YYnXjZT9Byw3SgRv+2RzW9x6bc1h0eWgRj5S6aDzQZzPg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="../main.css">
+  <link rel="stylesheet" href="account.css"/>
+</head>
+<body class="text-body">
+
+  
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <div
+        class="w-100 px-3 px-lg-4 py-2 bg-black text-white badge shadow-lg d-flex align-items-center"
+      >
+        <a
+          class="navbar-brand logo-text text-white d-flex align-items-center me-2"
+          href="../index.html"
+        >
+          Premium <i class="fa-brands fa-apple ms-2"></i>
+        </a>
+
+        <button
+          class="navbar-toggler border-0 text-white ms-auto"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-lg-auto my-2 my-lg-0 gap-lg-4">
+            <li class="nav-item">
+              <a class="nav-link text-white fs-6" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-white fs-6"
+                href="../products/products.html"
+                >Explore Product</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fs-6" href="../contact/contact.html"
+                >Contact Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fs-6" href="../About-us/about.html"
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fs-6" href="../ticket/ticket.html"
+                >Ticket</a
+              >
+            </li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-3 ms-lg-3">
+            <a
+              href="../wishlist/wish.html"
+              class="icon-link icon-btn text-decoration-none fs-4 position-relative"
+              aria-label="Wishlist"
+            >
+              <i class="fa-solid fa-heart text-danger"></i>
+              <span id="wishlistCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 10px; display: none;">0</span>
+            </a>
+            <a
+              href="../cart/cart.html"
+              class="icon-link icon-btn text-decoration-none fs-5 position-relative"
+              aria-label="Cart"
+            >
+              <i class="fa-solid fa-cart-shopping text-white"></i>
+              <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 10px; display: none;">0</span>
+            </a>
+            <a
+              href="account.html"
+              class="icon-link icon-btn text-decoration-none fs-5"
+              aria-label="Profile"
+              ><i class="fa fa-user text-white"></i
+            ></a>
+          </div>
+          <button
+            id="themeToggle"
+            class="btn btn-sm theme-toggle ms-1"
+            aria-label="Toggle theme"
+          >
+            <i class="fa-regular fa-moon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+
+  <main class="account-page">
+    <div class="container py-4">
+      <div class="row g-4">
+        
+        <aside class="col-12 col-lg-3">
+          <div class="card shadow-sm position-sticky">
+            <div class="card-body text-center">
+              <img id="avatarImg" src="https://i.pravatar.cc/120?img=1" alt="Profile"
+                   class="rounded-circle mb-2 border border-3 border-white shadow-sm" width="80" height="80"/>
+              <div>
+                <input id="avatarInput" type="file" accept="image/*" class="d-none" />
+                <button id="avatarBtn" class="btn btn-sm btn-outline-secondary">Change Photo</button>
+              </div>
+              <h6 id="accName" class="mb-1">Ahmed</h6>
+              <p id="accEmail" class="text-secondary small mb-3">Ahmed.doe@example.com</p>
+
+              <div class="list-group list-group-flush">
+                <a href="#orders"   class="list-group-item list-group-item-action d-flex align-items-center gap-2 "><i class="bi bi-receipt"></i> Order History</a>
+                <a href="#personal" class="list-group-item list-group-item-action d-flex align-items-center gap-2"><i class="bi bi-person"></i> Personal Information</a>
+                <a href="#payments" class="list-group-item list-group-item-action d-flex align-items-center gap-2"><i class="bi bi-credit-card"></i> Payment Methods</a>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        
+        <section class="col-12 col-lg-9">
+          
+          <section id="orders" class="mb-4">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title mb-3">Order History</h5>
+
+                <div id="ordersList" class="vstack gap-2"></div>
+              </div>
+            </div>
+          </section>
+
+          
+          <section id="personal" class="mb-4">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h5 class="card-title mb-0">Personal Information</h5>
+                  <div class="d-flex gap-2">
+                    <button id="piEdit" class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil me-1"></i>Edit</button>
+                    <button id="piSave" class="btn btn-sm btn-primary d-none">Save</button>
+                    <button id="piCancel" class="btn btn-sm btn-outline-secondary d-none">Cancel</button>
+                  </div>
+                </div>
+
+                <form class="row g-3">
+                  <div class="col-12">
+                    <label class="form-label small text-secondary">Full Name</label>
+                    <input id="accNameInput" type="text" class="form-control" value="Ahmed" readonly>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label small text-secondary">Email Address</label>
+                    <input id="accEmailInput" type="email" class="form-control" value="Ahmed.doe@example.com" readonly>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label small text-secondary">Phone Number</label>
+                    <input id="accPhoneInput" type="tel" class="form-control" value="" readonly>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+
+          
+          <section id="payments" class="mb-4">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h5 class="card-title mb-0">Payment Methods</h5>
+                  <button id="addCardBtn" class="btn btn-sm btn-primary"><i class="bi bi-plus-lg me-1"></i>Add New Card</button>
+                </div>
+
+                <div id="paymentsList" class="vstack gap-2">
+                  <div class="border rounded-3 p-3 d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-3">
+                      <span class="d-inline-flex align-items-center justify-content-center rounded-2 bg-light" style="width:44px;height:44px">
+                        <i class="bi bi-credit-card-2-front"></i>
+                      </span>
+                      <div>
+                        <div class="fw-medium">Visa ending in 1234</div>
+                        <small class="text-secondary">Expires 12/25</small>
+                      </div>
+                    </div>
+                    <button class="btn btn-outline-danger btn-sm">Remove</button>
+                  </div>
+
+                  <div class="border rounded-3 p-3 d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-3">
+                      <span class="d-inline-flex align-items-center justify-content-center rounded-2 bg-light" style="width:44px;height:44px">
+                        <i class="bi bi-phone"></i>
+                      </span>
+                      <div>
+                        <div class="fw-medium">Apple Card ending in 5678</div>
+                        <small class="text-secondary">Expires 08/26</small>
+                      </div>
+                    </div>
+                    <button class="btn btn-outline-danger btn-sm">Remove</button>
+                  </div>
+                </div>
+                <form id="addCardForm" class="row g-2 mt-3 d-none">
+                  <div class="col-md-6">
+                    <input id="newCardNumber" type="text" class="form-control" placeholder="Card Number (16 digits)">
+                  </div>
+                  <div class="col-md-3">
+                    <input id="newCardExpiry" type="text" class="form-control" placeholder="MM/YY">
+                  </div>
+                  <div class="col-md-3 d-grid">
+                    <button id="saveCardBtn" class="btn btn-dark" type="button">Save Card</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="mt-5">
+    <div class="container pt-5">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md-4 text-center">
+          <h5>Premium</h5>
+          <p>The best way to buy the products you love.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <h5>Links</h5>
+          <a class="text-decoration-none" href="../products/products.html"
+            >Explore Product</a
+          >
+          <a class="text-decoration-none" href="../About-us/about.html"
+            >About Us</a
+          >
+          <a class="text-decoration-none" href="../contact/contact.html"
+            >Contact Us</a
+          >
+          <a class="text-decoration-none" href="../ticket/ticket.html"
+            >Ticket</a
+          >
+        </div>
+        <div class="col-md-4 text-center">
+          <h5>Our Social</h5>
+          <div class="social">
+            <a href="https://www.facebook.com/"
+              ><i class="bi bi-facebook fs-4"></i
+            ></a>
+            <a href="https://x.com/"
+              ><i class="bi bi-twitter px-4 fs-4"></i
+            ></a>
+            <a href="https://www.instagram.com/"
+              ><i class="bi bi-instagram fs-4"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <hr class="mt-4 mb-2" />
+      <p class="text-center mb-0">
+        © 2025 Premium Store. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+                  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script type="module" src="../shared/nav.js"></script>
+<script type="module" src="../shared/navbar-counts.js"></script>
+<script type="module" src="account.js"></script>
+<script  type="module" src="../shared/theme.js"></script>
+</body>
+</html>
+
+
+
+
+
+

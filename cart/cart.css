@@ -1,0 +1,85 @@
+
+.cart-page { color: var(--text); }
+
+
+.cart-page .card,
+.cart-page .list-group-item,
+.cart-page .panel,
+.cart-page .summary-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--text);
+}
+
+
+:root[data-theme="dark"] .cart-page .bg-white {
+  background-color: var(--panel) !important;
+  border-color: var(--line) !important;
+}
+
+
+.cart-page .card-title,
+.cart-page .section-title,
+.cart-page .summary-title { color: var(--text); }
+
+.cart-page .text-muted,
+.cart-page .muted { color: var(--muted) !important; }
+
+
+.cart-page .price,
+.cart-page .line-price,
+.cart-page .total-amount { color: var(--text); opacity: .95; }
+
+
+.cart-page .qty,
+.cart-page .qty .btn,
+.cart-page .qty-btn,
+.cart-page .btn-qty {
+  background: color-mix(in oklab, var(--panel-2) 85%, transparent);
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+.cart-page .qty .btn:hover { filter: brightness(1.05); }
+
+
+.cart-page .btn-outline-danger{
+  --danger: #ef4444;
+  color: var(--danger, #ef4444);
+  border-color: var(--danger, #ef4444);
+  background: transparent;
+}
+.cart-page .btn-outline-danger:hover{
+  background: color-mix(in oklab, #ef4444 12%, transparent);
+  border-color: #ef4444;
+}
+
+
+.cart-page .btn-dark,
+.cart-page .btn-primary {
+  background: color-mix(in oklab, var(--accent-2) 18%, var(--panel));
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+.cart-page .btn-dark:hover,
+.cart-page .btn-primary:hover {
+  background: color-mix(in oklab, var(--accent-2) 28%, var(--panel));
+  border-color: color-mix(in oklab, var(--accent) 45%, var(--line));
+}
+
+
+.cart-page table { color: var(--text); }
+.cart-page thead th{
+  color: var(--text);
+  background: color-mix(in oklab, var(--panel-2) 85%, transparent);
+  border-bottom: 1px solid var(--line);
+}
+.cart-page tbody td{
+  border-top: 1px solid var(--line);
+}
+
+
+.cart-page hr,
+.cart-page .divider { border-color: var(--line) !important; }
+
+
+:root[data-theme="dark"] .cart-page .text-dark { color: var(--text) !important; }

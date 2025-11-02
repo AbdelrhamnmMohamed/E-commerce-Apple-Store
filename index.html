@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-T2dMlPqL7R2tK6W91C+kGFrHxgGxFZkXeykWmRGz1YYnXjZT9Byw3SgRv+2RzW9x6bc1h0eWgRj5S6aDzQZzPg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Premium</title>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <div
+          class="w-100 px-3 px-lg-4 py-2 bg-black text-white badge shadow-lg d-flex align-items-center"
+        >
+          <a
+            class="navbar-brand logo-text text-white d-flex align-items-center me-2"
+            href="index.html"
+          >
+            Premium <i class="fa-brands fa-apple ms-2"></i>
+          </a>
+
+          <button
+            class="navbar-toggler border-0 text-white ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-lg-auto my-2 my-lg-0 gap-lg-4">
+              <li class="nav-item">
+                <a class="nav-link text-white fs-6" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white fs-6"
+                  href="products/products.html"
+                  >Explore Product</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white fs-6" href="contact/contact.html"
+                  >Contact Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white fs-6" href="About-us/about.html"
+                  >About Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white fs-6" href="ticket/ticket.html"
+                  >Ticket</a
+                >
+              </li>
+            </ul>
+
+            <div class="d-flex align-items-center gap-3 ms-lg-3">
+              <a
+                href="wishlist/wish.html"
+                class="icon-link icon-btn text-decoration-none fs-4 position-relative"
+                aria-label="Wishlist"
+              >
+                <i class="fa-solid fa-heart text-danger"></i>
+                <span id="wishlistCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 10px; display: none;">0</span>
+              </a>
+              <a
+                href="cart/cart.html"
+                class="icon-link icon-btn text-decoration-none fs-5 position-relative"
+                aria-label="Cart"
+              >
+                <i class="fa-solid fa-cart-shopping text-white"></i>
+                <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 10px; display: none;">0</span>
+              </a>
+              <a
+                href="#"
+                class="icon-link icon-btn text-decoration-none fs-5"
+                aria-label="Profile"
+              >
+                <i class="fa fa-user text-white"></i>
+              </a>
+            </div>
+            <button
+              id="themeToggle"
+              class="btn btn-sm theme-toggle ms-1"
+              aria-label="Toggle theme"
+            >
+              <i class="fa-regular fa-moon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    
+    <div class="main mt-0">
+      <div
+        class="home d-flex flex-column align-items-center justify-content-center"
+        style="height: 100%"
+      >
+        <h1 class="text-dark text-center logo-text">Premium</h1>
+        <h1 class="text-center text-light pb-2">
+          The best way to buy the products you love.
+        </h1>
+        <a
+          href="products/products.html"
+          class="btn btn-gradient btn-lg rounded-pill px-4 shadow-sm text-white"
+        >
+          <i class="fa-solid fa-bag-shopping me-2"></i> Order Now</a
+        >
+      </div>
+    </div>
+
+    
+    <div class="container text-center p-5 pb-2">
+      <h1 class="text-center justify-content" id="new">New Arrivals</h1>
+      <div class="row justify-content-center">
+        <div class="card m-2 position-relative" style="width: 18rem">
+          <button class="btn position-absolute home-wishlist-btn" style="top: 10px; right: 10px; z-index: 10; background: none; border: none; padding: 5px; font-size: 24px; color: #666;" title="Add to wishlist" data-id="p-iph-17" data-title="iPhone 17" data-price="150" data-image="imgs/iphone_air.jpg">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <div class="ratio ratio-4x3 p-3 bg-white">
+            <img
+              src="imgs/iphone_air.jpg"
+              class="w-100 h-100 object-fit-contain"
+              alt="iPhone 17"
+            />
+          </div>
+          <div class="card-body text-center">
+            <h3 class="card-title">iPhone 17</h3>
+            <a
+              href="#"
+              class="btn btn-dark mt-4 home-view-details"
+              data-id="p-iph-17"
+            >
+              View Details
+            </a>
+          </div>
+        </div>
+
+        <div class="card m-2 position-relative" style="width: 18rem">
+          <button class="btn position-absolute home-wishlist-btn" style="top: 10px; right: 10px; z-index: 10; background: none; border: none; padding: 5px; font-size: 24px; color: #666;" title="Add to wishlist" data-id="p-air-3" data-title="AirPods 3" data-price="199" data-image="imgs/air.png">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <div class="ratio ratio-4x3 p-3 bg-white">
+            <img
+              src="imgs/air.png"
+              class="w-100 h-100 object-fit-contain"
+              alt="iPhone 17"
+            />
+          </div>
+          <div class="card-body text-center">
+            <h3 class="card-title">AirPods 3</h3>
+            <a
+              href="#"
+              class="btn btn-dark mt-4 home-view-details"
+              data-id="p-air-3"
+            >
+              View Details
+            </a>
+          </div>
+        </div>
+
+        <div class="card m-2 position-relative" style="width: 18rem">
+          <button class="btn position-absolute home-wishlist-btn" style="top: 10px; right: 10px; z-index: 10; background: none; border: none; padding: 5px; font-size: 24px; color: #666;" title="Add to wishlist" data-id="p-iph-17p" data-title="iPhone 17 pro max" data-price="220" data-image="imgs/IP2.png">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <div class="ratio ratio-4x3 p-3 bg-white">
+            <img
+              src="imgs/IP2.png"
+              class="w-100 h-100 object-fit-contain"
+              alt="iPhone 17"
+            />
+          </div>
+          <div class="card-body text-center">
+            <h3 class="card-title">iPhone 17 pro max</h3>
+            <a
+              href="#"
+              class="btn btn-dark mt-4 home-view-details"
+              data-id="p-iph-17p"
+            >
+              View Details
+            </a>
+          </div>
+        </div>
+
+        <div class="card m-2 position-relative" style="width: 18rem">
+          <button class="btn position-absolute home-wishlist-btn" style="top: 10px; right: 10px; z-index: 10; background: none; border: none; padding: 5px; font-size: 24px; color: #666;" title="Add to wishlist" data-id="p-lap-m3" data-title="mac m4" data-price="1899" data-image="imgs/mac.png">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <div class="ratio ratio-4x3 p-3 bg-white">
+            <img
+              src="imgs/mac.png"
+              class="w-100 h-100 object-fit-contain"
+              alt="iPhone 17"
+            />
+          </div>
+          <div class="card-body text-center">
+            <h3 class="card-title">mac m4</h3>
+            <a
+              href="#"
+              class="btn btn-dark mt-4 home-view-details"
+              data-id="p-lap-m3"
+            >
+              View Details
+            </a>
+          </div>
+        </div>
+      </div>
+      <a href="products/products.html" class="btn btn-dark mt-4"> See More</a>
+    </div>
+
+    
+    <div class="container text-center p-5">
+      <h1 class="text-center justify-content pb-2" id="best">Best Seller</h1>
+      <div class="row justify-content-center">
+        <div class="card m-2 position-relative" style="width: 18rem">
+          <button class="btn position-absolute home-wishlist-btn" style="top: 10px; right: 10px; z-index: 10; background: none; border: none; padding: 5px; font-size: 24px; color: #666;" title="Add to wishlist" data-id="p-iph-17" data-title="iPhone 17" data-price="150" data-image="imgs/iphone_air.jpg">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <div class="ratio ratio-4x3 p-3 bg-white">
+            <img
+              src="imgs/iphone_air.jpg"
+              class="w-100 h-100 object-fit-contain"
+              alt="iPhone 17"
+            />
+          </div>
+          <div class="card-body text-center">
+            <h3 class="card-title">iPhone 17</h3>
+            <a
+              href="#"
+              class="btn btn-dark mt-4 home-view-details"
+              data-id="p-iph-17"
+            >
+              View Details
+            </a>
+          </div>
+        </div>
+
+        <div class="card m-2 position-relative" style="width: 18rem">
+          <button class="btn position-absolute home-wishlist-btn" style="top: 10px; right: 10px; z-index: 10; background: none; border: none; padding: 5px; font-size: 24px; color: #666;" title="Add to wishlist" data-id="p-iph-17p" data-title="iPhone 17 Pro" data-price="220" data-image="imgs/5.jpg">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <div class="ratio ratio-4x3 p-3 bg-white">
+            <img
+              src="imgs/5.jpg"
+              class="w-100 h-100 object-fit-contain"
+              alt="iPhone 17"
+            />
+          </div>
+          <div class="card-body text-center">
+            <h3 class="card-title">iPhone 17 Pro</h3>
+            <a
+              href="#"
+              class="btn btn-dark mt-4 home-view-details"
+              data-id="p-iph-17p"
+            >
+              View Details
+            </a>
+          </div>
+        </div>
+
+        <div class="card m-2 position-relative" style="width: 18rem">
+          <button class="btn position-absolute home-wishlist-btn" style="top: 10px; right: 10px; z-index: 10; background: none; border: none; padding: 5px; font-size: 24px; color: #666;" title="Add to wishlist" data-id="p-air-pro" data-title="Airpods pro" data-price="249" data-image="imgs/cat3.png">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <div class="ratio ratio-4x3 p-3 bg-white">
+            <img
+              src="imgs/cat3.png"
+              class="w-100 h-100 object-fit-contain"
+              alt="iPhone 17"
+            />
+          </div>
+          <div class="card-body text-center">
+            <h3 class="card-title">Airpods pro</h3>
+            <a
+              href="#"
+              class="btn btn-dark mt-4 home-view-details"
+              data-id="p-air-pro"
+            >
+              View Details
+            </a>
+          </div>
+        </div>
+
+        <div class="card m-2 position-relative" style="width: 18rem">
+          <button class="btn position-absolute home-wishlist-btn" style="top: 10px; right: 10px; z-index: 10; background: none; border: none; padding: 5px; font-size: 24px; color: #666;" title="Add to wishlist" data-id="p-lap-m1" data-title="mac air" data-price="999" data-image="imgs/mac air.png">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <div class="ratio ratio-4x3 p-3 bg-white">
+            <img
+              src="imgs/mac air.png"
+              class="w-100 h-100 object-fit-contain"
+              alt="iPhone 17"
+            />
+          </div>
+          <div class="card-body text-center">
+            <h3 class="card-title">mac air</h3>
+            <a
+              href="#"
+              class="btn btn-dark mt-4 home-view-details"
+              data-id="p-lap-m1"
+            >
+              View Details
+            </a>
+          </div>
+        </div>
+      </div>
+      <a href="products/products.html" class="btn btn-dark mt-4"> See More</a>
+    </div>
+
+    
+    <div class="explore mt-5">
+      <h2 class="text-center pb-2" style="font-weight: bold">
+        Explore Product
+      </h2>
+
+      <div class="container bg-black p-4 rounded-4">
+        <div class="row g-3 d-flex justify-content-center align-items-center">
+          <div class="col-md-6 col-lg-8">
+            <div class="product-card">
+              <img src="imgs/cat1.png" alt="Tv" />
+              <div class="product-info">
+                <span>iPhone</span>
+                <span>→</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="product-card">
+              <img src="imgs/cat2.png" alt="Mac Air Book" />
+              <div class="product-info">
+                <span>Mac Air Book</span>
+                <span>→</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6">
+            <div class="product-card">
+              <img src="imgs/cat3.png" alt="Apple Vision" />
+              <div class="product-info">
+                <span>Air pods</span>
+                <span>→</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6">
+            <div class="product-card">
+              <img src="imgs/cat4.png" alt="Air Pods" />
+              <div class="product-info">
+                <span>Watch</span>
+                <span>→</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="product-card">
+              <img src="imgs/cat5.png" alt="Watch" />
+              <div class="product-info">
+                <span>Apple Vision</span>
+                <span>→</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-8">
+            <div class="product-card">
+              <img src="imgs/cat6.png" alt="MacBook Pro" />
+              <div class="product-info">
+                <span>TV</span>
+                <span>→</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="about mb-5 mt-5" id="about">
+      <h2 class="text-center pb-2" style="font-weight: bold">About Premium</h2>
+      <div
+        class="container d-flex justify-content-center align-items-center p-3 flex-wrap"
+      >
+        <img src="imgs/store.png" alt="" class="shape" />
+        <div class="text text-center p-3">
+          <h3>Who We Are ?</h3>
+          <p class="text-secondary">
+            We are a team of apple certified sales professional & technical
+            support experts <br />
+            (Hardware & Software)iPhone, iPad, Mac & Even Apple Watch
+          </p>
+        </div>
+      </div>
+    </div>
+    
+
+    <footer>
+      <div class="container pt-5">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-4 text-center">
+            <h5>Premium</h5>
+            <p>The best way to buy the products you love.</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <h5>Links</h5>
+            <a class="text-decoration-none" href="products/products.html"
+              >Explore Product</a
+            >
+            <a class="text-decoration-none" href="About-us/about.html"
+              >About Us</a
+            >
+            <a class="text-decoration-none" href="contact/contact.html"
+              >Contact Us</a
+            >
+            <a class="text-decoration-none" href="ticket/ticket.html">Ticket</a>
+          </div>
+          <div class="col-md-4 text-center">
+            <h5>Our Social</h5>
+            <div class="social">
+              <a href="https://www.facebook.com/"
+                ><i class="bi bi-facebook fs-4"></i
+              ></a>
+              <a href="https://x.com/"
+                ><i class="bi bi-twitter px-4 fs-4"></i
+              ></a>
+              <a href="https://www.instagram.com/"
+                ><i class="bi bi-instagram fs-4"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <hr class="mt-4 mb-2" />
+        <p class="text-center mb-0">
+          © 2025 Premium Store. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="shared/navbar.js"></script>
+    <script type="module" src="shared/navbar-counts.js"></script>
+    <script type="module" src="shared/demo-accounts.js"></script>
+    <script type="module" src="shared/theme.js"></script>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>

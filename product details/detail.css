@@ -1,0 +1,141 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+}
+
+
+.product-gallery {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.thumbs img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  transition: 0.2s;
+}
+
+.thumbs img:hover {
+  border: 2px solid #000;
+}
+
+.thumbs img.active {
+  border: 2px solid #000;
+}
+
+.main-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+.color-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.color-orange { background-color: #e26b3f; }
+.color-blue { background-color: #1f2f5f; }
+.color-gray { background-color: #ccc; }
+
+
+
+
+.checked {
+  color: orange;
+}
+
+
+.review-bar {
+  height: 6px;
+  border-radius: 10px;
+  background: var(--review-bar-bg);
+  overflow: hidden;
+}
+
+.review-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--review-fill);
+}
+
+
+:root {
+  --review-bar-bg: #e5e7eb;   
+  --review-fill: #f59e0b;     
+}
+
+:root[data-theme="dark"] {
+  --review-bar-bg: #1f2937;   
+  --review-fill: #fbbf24;     
+}
+
+
+.product-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.add-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+
+.add-btn:hover {
+  background-color: #333;
+}
+
+
+.custom-breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.custom-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  content: "›";
+  
+}
+
+.custom-breadcrumb .breadcrumb-item a {
+  text-decoration: none;
+  
+  font-weight: 400;
+}
+
+
+
+.custom-breadcrumb .breadcrumb-item.active {
+  
+  font-weight: 500;
+}
+
+.product-card
+{
+background-color: #F5F5F5; 
+}
+.product-card .card-body 
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 5px; 
+}

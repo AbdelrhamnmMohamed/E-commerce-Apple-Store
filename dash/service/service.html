@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Customer Service</title>
+
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="../main.css" />
+  </head>
+  <body>
+    
+    <aside id="sidebar" class="sidebar">
+      <h3>
+        <a href="../../index.html" class="text-white text-decoration-none"
+          ><i class="fa-brands fa-apple"></i> <br />Premium</a
+        >
+      </h3>
+      <ul class="text-center">
+        <li>
+          <a href="../dash/dash.html"><i class="fa fa-home"></i>Dashboard</a>
+        </li>
+        <li>
+          <a href="../add_product/index.html"
+            ><i class="fa fa-box"></i> Products</a
+          >
+        </li>
+        <li>
+          <a href="../customers/customer.html"
+            ><i class="fa fa-users"></i> Customers</a
+          >
+        </li>
+        <li>
+          <a href="../order/order.html"><i class="fa fa-users"></i> Orders</a>
+        </li>
+        <li>
+          <a href="../payment/payment.html"
+            ><i class="fa-solid fa-credit-card"></i> Payments</a
+          >
+        </li>
+        <li>
+          <a href="../seller/seller.html"
+            ><i class="fa-solid fa-truck-fast"></i> Sellers</a
+          >
+        </li>
+        <li>
+          <a href="../service/service.html"
+            ><i class="fa-solid fa-headset"></i> Customer Service</a
+          >
+        </li>
+      </ul>
+    </aside>
+
+    
+    <main id="mainContent" class="main-content">
+      
+      <nav class="navbar navbar-custom navbar-light mb-4">
+        <div
+          class="container-fluid d-flex align-items-center justify-content-between"
+        >
+          <button class="btn btn-outline-secondary" id="toggleSidebarBtn">
+            <i id="toggleIcon" class="fa fa-bars"></i>
+          </button>
+          <span class="navbar-brand mb-0 h1">Admin Panel</span>
+        </div>
+      </nav>
+
+      <h2 class="mb-4">Customer Service</h2>
+      
+      <div class="cards">
+        <div class="row g-3">
+          <div class="col-12 col-md-4 text-center">
+            <div class="card shadow-sm p-3 text-primary">
+              <i class="fa-solid fa-ticket fa-2x mb-2"></i>
+              <h5>Total Tickets</h5>
+              <p class="fs-4 fw-bold" id="totalTickets">0</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 text-center">
+            <div class="card shadow-sm p-3 text-success">
+              <i class="fa-solid fa-circle-check fa-2x mb-2"></i>
+              <h5>Open Tickets</h5>
+              <p class="fs-4 fw-bold" id="openTickets">0</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 text-center">
+            <div class="card shadow-sm p-3 text-danger">
+              <i class="fa-regular fa-circle-xmark fa-2x mb-2"></i>
+              <h5>Closed Tickets</h5>
+              <p class="fs-4 fw-bold" id="closedTickets">0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="table-responsive mt-3 shadow-sm rounded">
+        <table
+          class="table table-striped align-middle table-bordered text-center"
+          id="productTable"
+        >
+          <thead class="table-dark">
+            <tr>
+              <th>Ticket ID</th>
+              <th>Customer Name</th>
+              <th>E-mail</th>
+              <th>Subject</th>
+              <th>Created At</th>
+              <th>Category</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="ticketsTableBody">
+            
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../dash.js"></script>
+    <script type="module" src="service.js"></script>
+  </body>
+</html>

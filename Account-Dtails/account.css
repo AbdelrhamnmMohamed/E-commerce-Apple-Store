@@ -1,0 +1,49 @@
+
+.account-page { color: var(--text); background: var(--bg); }
+.account-page .container{ max-width: 1140px; margin-inline: auto; }
+
+
+.account-page .card,
+.account-page .list-group-item,
+.account-page .accordion-item,
+.account-page .accordion-body {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--text);
+  border-radius: 14px;
+}
+
+.account-page .card { box-shadow: 0 10px 22px rgba(0,0,0,.06); }
+.account-page .card + .card { margin-top: 14px; }
+
+
+.account-page .accordion-button{
+  background: color-mix(in oklab, var(--panel) 94%, transparent);
+  color: var(--text);
+  border-bottom: 1px solid var(--line);
+  box-shadow: none;
+}
+.account-page .accordion-button:not(.collapsed){
+  background: color-mix(in oklab, var(--panel-2) 85%, transparent);
+  color: var(--text);
+  box-shadow: none;
+  border-bottom-color: var(--line);
+}
+
+.account-page .form-control{
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+.account-page .form-control:focus{ box-shadow: var(--ring); }
+
+.account-page .list-group-item{
+  background: var(--panel);
+  border: 1px solid var(--line);
+}
+
+.account-page .icon-square{ width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;background:var(--panel-2); }
+
+
+:root[data-theme="dark"] .account-page .bg-white{ background-color: var(--panel) !important; }
+:root[data-theme="dark"] .account-page .text-dark{ color: var(--text) !important; }

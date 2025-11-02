@@ -1,0 +1,105 @@
+
+
+
+
+
+.delivery-page { color: var(--text); }
+
+
+.delivery-page .progress-container {
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 30px;
+}
+
+.delivery-page .progress-steps { max-width: 700px; margin: 0 auto; }
+.delivery-page .step { text-align: center; position: relative; flex: 1; }
+
+.delivery-page .circle{
+  width:35px;height:35px;line-height:35px;border-radius:50%;
+  background-color: color-mix(in oklab, var(--panel-2) 60%, var(--line)); 
+  color: var(--text); 
+  margin:0 auto 8px; font-weight:600; transition:.3s;
+}
+.delivery-page .step.completed .circle,
+.delivery-page .step.active .circle {
+  background-color:#28a745; 
+  color:#fff;
+}
+.delivery-page .line{
+  height:3px; background-color: var(--line); 
+  flex:1; margin:0 5px; border-radius:2px;
+}
+.delivery-page .step.completed + .line { background-color:#28a745; }
+.delivery-page .step p{
+  margin:0; font-size:14px; color: var(--text); font-weight:500; opacity:.9; 
+}
+
+
+.delivery-page h2 { font-weight:600; color: var(--text); }
+
+
+.delivery-page form,
+.delivery-page .delivery-card{
+  max-width:700px; margin:0 auto;
+  background: var(--panel);
+  border:1px solid var(--line);           
+  border-radius: var(--radius);
+  color: var(--text);
+}
+
+
+:root[data-theme="dark"] .delivery-page .bg-white{
+  background-color: var(--panel) !important;
+  border-color: var(--line) !important;
+}
+
+
+.delivery-page .form-check-label{
+  font-weight:500;
+  color: var(--text);                      
+  margin-left:10px;
+}
+.delivery-page .form-text,
+.delivery-page .muted{ color: var(--muted); }
+
+
+.delivery-page .price { color: var(--text); opacity:.95; }
+
+
+.delivery-page .btn,
+.delivery-page button{
+  border-radius:8px;
+  font-weight:500;
+  transition:.3s;
+  border:1px solid var(--line);
+}
+
+
+.delivery-page .btn-outline-dark{
+  background: transparent;
+  color: var(--text);
+  border-color: var(--line);
+}
+.delivery-page .btn-outline-dark:hover{
+  background: color-mix(in oklab, var(--accent) 10%, transparent);
+  border-color: color-mix(in oklab, var(--accent) 35%, var(--line));
+}
+
+
+.delivery-page .btn-dark,
+.delivery-page .btn-primary{
+  background: color-mix(in oklab, var(--accent-2) 18%, var(--panel));
+  color: var(--text);
+  border-color: var(--line);
+}
+.delivery-page .btn-dark:hover,
+.delivery-page .btn-primary:hover{
+  background: color-mix(in oklab, var(--accent-2) 28%, var(--panel));
+  border-color: color-mix(in oklab, var(--accent) 45%, var(--line));
+}
+
+
+.delivery-page .d-flex button{
+  font-size:16px;
+  flex:1 1 0;
+}
