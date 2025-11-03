@@ -89,7 +89,10 @@ const initializeDefaultProducts = () => {
       category: p.category,
       quantity: 100,
       status: "Active",
-      createdAt: new Date().toISOString().split("T")[0]
+      createdAt: new Date().toISOString().split("T")[0],
+      sellerId: "admin-1", // Default products belong to the main admin
+      sellerName: "Premium Store",
+      sellerEmail: "many@admin.com"
     }));
     localStorage.setItem("allProducts", JSON.stringify(productsForStorage));
     console.log(`✅ Successfully initialized ${productsForStorage.length} default products!`);

@@ -7,9 +7,22 @@ import {
 
 
 function updateSellerDashboardStats() {
-  const sellerId = "default-seller";
+  // Get current logged-in seller
+  const currentUser = JSON.parse(localStorage.getItem("currentUser")) || null;
+  
+  if (!currentUser || currentUser.role !== 'seller') {
+    alert('You must be logged in as a seller!');
+    window.location.href = '../../login/login.html';
+    return;
+  }
+  
+  const sellerId = currentUser.id;
   const sellerOrders = getOrdersForSeller(sellerId);
   const allUsers = getUsers();
+  
+  // Get ONLY this seller's products
+  const allProducts = JSON.parse(localStorage.getItem("allProducts")) || [];
+  const myProducts = allProducts.filter(p => p.sellerId === sellerId);
 
 
   const totalOrders = sellerOrders.length;
@@ -19,7 +32,7 @@ function updateSellerDashboardStats() {
   );
   const uniqueCustomers = new Set(sellerOrders.map((order) => order.userEmail))
     .size;
-  const totalProducts = 10;
+  const totalProducts = myProducts.length; // Only count seller's own products
 
 
   const totalProductsEl = document.getElementById("sellerTotalProducts");
@@ -35,7 +48,11 @@ function updateSellerDashboardStats() {
 
 
 function generateSalesChartData() {
-  const sellerId = "default-seller";
+  // Get current logged-in seller
+  const currentUser = JSON.parse(localStorage.getItem("currentUser")) || null;
+  if (!currentUser) return { labels: [], data: [] };
+  
+  const sellerId = currentUser.id;
   const sellerOrders = getOrdersForSeller(sellerId);
   const now = new Date();
   const months = [

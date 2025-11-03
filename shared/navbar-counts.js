@@ -1,13 +1,20 @@
 
-import { getWishlist, getCart } from "./store.js";
+import { getWishlist, getCart, isLoggedIn } from "./store.js";
 
 // Update navbar counts for wishlist and cart
 export function updateNavbarCounts() {
-  const wishlistCount = getWishlist().length;
-  const cartCount = getCart().reduce((sum, item) => sum + item.qty, 0);
-  
   const wishlistBadge = document.getElementById("wishlistCount");
   const cartBadge = document.getElementById("cartCount");
+  
+  // Only show counts if user is logged in
+  if (!isLoggedIn()) {
+    if (wishlistBadge) wishlistBadge.style.display = "none";
+    if (cartBadge) cartBadge.style.display = "none";
+    return;
+  }
+  
+  const wishlistCount = getWishlist().length;
+  const cartCount = getCart().reduce((sum, item) => sum + item.qty, 0);
   
   if (wishlistBadge) {
     if (wishlistCount > 0) {

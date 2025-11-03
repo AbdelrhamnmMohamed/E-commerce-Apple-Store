@@ -6,6 +6,7 @@ import {
   isLoggedIn,
   addToWishlist,
 } from "../shared/store.js";
+import { showLoginPrompt } from "../shared/login-prompt.js";
 
 function $(sel, root = document) {
   return root.querySelector(sel);
@@ -150,9 +151,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  document.querySelector(".add-btn")?.addEventListener("click", () => {
+  document.querySelector(".add-btn")?.addEventListener("click", async () => {
     if (!isLoggedIn()) {
-      window.location.href = "../login/login.html";
+      const shouldLogin = await showLoginPrompt('add items to your cart');
+      if (shouldLogin) {
+        window.location.href = "../login/login.html";
+      }
       return;
     }
     
@@ -180,8 +184,18 @@ document.addEventListener("DOMContentLoaded", () => {
     wishBtn.innerHTML =
       '<i class="fa-regular fa-heart me-1"></i> Add to Wishlist';
     addBtn.parentElement?.insertBefore(wishBtn, addBtn.nextSibling);
-    wishBtn.addEventListener("click", (e) => {
+    wishBtn.addEventListener("click", async (e) => {
       e.preventDefault();
+      
+      // Check if user is logged in
+      if (!isLoggedIn()) {
+        const shouldLogin = await showLoginPrompt('add items to your wishlist');
+        if (shouldLogin) {
+          window.location.href = "../login/login.html";
+        }
+        return;
+      }
+      
       addToWishlist({
         id: product.id,
         title: product.title,
@@ -200,9 +214,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   document.querySelectorAll(".related-wishlist-btn").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
+    btn.addEventListener("click", async (e) => {
       e.preventDefault();
       e.stopPropagation();
+      
+      // Check if user is logged in
+      if (!isLoggedIn()) {
+        const shouldLogin = await showLoginPrompt('add items to your wishlist');
+        if (shouldLogin) {
+          window.location.href = "../login/login.html";
+        }
+        return;
+      }
       
       const id = btn.getAttribute("data-id");
       const title = btn.getAttribute("data-title");

@@ -1,14 +1,22 @@
 
 
-import { addToWishlist, getWishlist, getCart } from "./shared/store.js";
+import { addToWishlist, getWishlist, getCart, isLoggedIn } from "./shared/store.js";
+import { showLoginPrompt } from "./shared/login-prompt.js";
 
 
 function updateNavbarCounts() {
-  const wishlistCount = getWishlist().length;
-  const cartCount = getCart().reduce((sum, item) => sum + item.qty, 0);
-  
   const wishlistBadge = document.getElementById("wishlistCount");
   const cartBadge = document.getElementById("cartCount");
+  
+  // Only show counts if user is logged in
+  if (!isLoggedIn()) {
+    if (wishlistBadge) wishlistBadge.style.display = "none";
+    if (cartBadge) cartBadge.style.display = "none";
+    return;
+  }
+  
+  const wishlistCount = getWishlist().length;
+  const cartCount = getCart().reduce((sum, item) => sum + item.qty, 0);
   
   if (wishlistBadge) {
     if (wishlistCount > 0) {
@@ -46,9 +54,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   document.querySelectorAll(".home-wishlist-btn").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
+    btn.addEventListener("click", async (e) => {
       e.preventDefault();
       e.stopPropagation();
+      
+      // Check if user is logged in
+      if (!isLoggedIn()) {
+        const shouldLogin = await showLoginPrompt('add items to your wishlist');
+        if (shouldLogin) {
+          window.location.href = "login/login.html";
+        }
+        return;
+      }
       
       const id = btn.getAttribute("data-id");
       const title = btn.getAttribute("data-title");

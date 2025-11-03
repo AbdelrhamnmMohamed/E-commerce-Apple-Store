@@ -44,7 +44,16 @@ window.addEventListener("resize", () => {
 
 // show orders at table
 function loadSellerOrders() {
-  const sellerId = "default-seller";
+  // Get current logged-in seller
+  const currentUser = JSON.parse(localStorage.getItem("currentUser")) || null;
+  
+  if (!currentUser || currentUser.role !== 'seller') {
+    alert('You must be logged in as a seller!');
+    window.location.href = '../../login/login.html';
+    return;
+  }
+  
+  const sellerId = currentUser.id;
   const orders = getOrdersForSeller(sellerId);
   const users = getUsers();
   const tbody = document.getElementById("sellerOrdersTableBody");

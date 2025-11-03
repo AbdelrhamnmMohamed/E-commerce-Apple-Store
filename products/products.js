@@ -6,6 +6,7 @@ import {
   isLoggedIn,
   addToWishlist,
 } from "../shared/store.js";
+import { showLoginPrompt } from "../shared/login-prompt.js";
 
 
 const $ = (sel, root = document) => root.querySelector(sel);
@@ -119,7 +120,7 @@ function setupSearch() {
 
 function setupActions() {
   const grid = $("#productsGrid");
-  grid.addEventListener("click", (e) => {
+  grid.addEventListener("click", async (e) => {
     const view = e.target.closest("a.view-details");
     const add = e.target.closest("button.add-to-cart");
     const wish = e.target.closest("button.btn-wishlist");
@@ -131,6 +132,15 @@ function setupActions() {
       return;
     }
     if (wish) {
+      // Check if user is logged in
+      if (!isLoggedIn()) {
+        const shouldLogin = await showLoginPrompt('add items to your wishlist');
+        if (shouldLogin) {
+          window.location.href = "../login/login.html";
+        }
+        return;
+      }
+      
       const id = wish.dataset.id;
       const allProducts = getAllProducts();
       const p = allProducts.find((x) => x.id === id);
@@ -154,7 +164,10 @@ function setupActions() {
       const p = allProducts.find((x) => x.id === id);
       if (!p) return;
       if (!isLoggedIn()) {
-        window.location.href = "../login/login.html";
+        const shouldLogin = await showLoginPrompt('add items to your cart');
+        if (shouldLogin) {
+          window.location.href = "../login/login.html";
+        }
         return;
       }
       addToCart(
