@@ -7,7 +7,7 @@ if (!isLoggedIn() || !isSeller()) {
   alert("⛔ Access Denied!\n\nYou must be logged in as a Seller to access this page.");
   window.location.href = "../login/login.html";
 }
-
+// side bar toggle
 const sidebar = document.getElementById("sidebar");
 const toggleButton = document.getElementById("toggleSidebarBtn");
 const toggleIcon = document.getElementById("toggleIcon");
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
+// graph chart
 const ctx = document.getElementById("dashboardChart").getContext("2d");
 
 const chartDataSets = {

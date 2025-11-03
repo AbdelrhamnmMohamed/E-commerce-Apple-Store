@@ -42,7 +42,7 @@ function displayAccountInfo() {
   console.log("- Automatic account creation");
 }
 
-
+// 
 window.displayAccountInfo = displayAccountInfo;
 
 

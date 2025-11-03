@@ -9,7 +9,7 @@ const sidebar = document.getElementById("sidebar");
 const toggleButton = document.getElementById("toggleSidebarBtn");
 const toggleIcon = document.getElementById("toggleIcon");
 const mainContent = document.getElementById("mainContent");
-
+// side bar toggle
 toggleButton.addEventListener("click", () => {
   if (window.innerWidth <= 992) {
     sidebar.classList.toggle("show");
@@ -42,7 +42,7 @@ window.addEventListener("resize", () => {
   }
 });
 
-
+// show orders at table
 function loadSellerOrders() {
   const sellerId = "default-seller";
   const orders = getOrdersForSeller(sellerId);
@@ -127,7 +127,7 @@ window.deleteSellerOrder = function (orderId) {
   }
 };
 
-
+// search functionality
 const searchInput = document.getElementById("searchInput");
 const table = document.getElementById("ordertable");
 

@@ -1,9 +1,7 @@
 
-
-
 import { getWishlist, getCart } from "./store.js";
 
-
+// Update navbar counts for wishlist and cart
 export function updateNavbarCounts() {
   const wishlistCount = getWishlist().length;
   const cartCount = getCart().reduce((sum, item) => sum + item.qty, 0);
@@ -30,6 +28,7 @@ export function updateNavbarCounts() {
   }
 }
 
+// Initialize counts on DOM load and set interval to update
 
 document.addEventListener("DOMContentLoaded", () => {
   updateNavbarCounts();
@@ -38,6 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(updateNavbarCounts, 2000);
 });
 
-
+// Expose function to global scope
 window.updateNavbarCounts = updateNavbarCounts;
 
