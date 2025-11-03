@@ -1,6 +1,9 @@
+
 const form = document.getElementById("productForm");
-    const backBtn = document.getElementById("backBtn");
-    const title = document.getElementById("formTitle");
+
+const backBtn = document.getElementById("backBtn");
+
+const title = document.getElementById("formTitle");
 
 
     const params = new URLSearchParams(window.location.search);
