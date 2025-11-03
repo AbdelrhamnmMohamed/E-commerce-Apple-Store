@@ -1,5 +1,5 @@
 
-
+// status navbar
 import { isLoggedIn, logout, getCurrentUser, isAdmin, isSeller } from "./store.js";
 
 
@@ -9,15 +9,8 @@ function getRelativePath(targetPath) {
 
   const normalizedPath = currentPath.replace(/\\/g, "/");
 
-
-
-
-
-
-
   const parts = normalizedPath.split("/");
   const filename = parts[parts.length - 1];
-
 
 
   const projectIndex = parts.findIndex((p) => p === "project");

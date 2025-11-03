@@ -1,13 +1,5 @@
-
-import {
-  isLoggedIn,
-  getCurrentUser,
-  logout,
-  isAdmin,
-  isSeller,
-  createDefaultAccounts,
-} from "./store.js";
-
+// manage navbar creation that depend about staus of user or admin or seller
+import { isLoggedIn, getCurrentUser, logout, isAdmin, isSeller, createDefaultAccounts,} from "./store.js";
 
 createDefaultAccounts();
 
